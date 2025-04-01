@@ -18,7 +18,7 @@ def delete_directory_and_contents(directory):
 
 all_dirs = os.listdir(".")
 
-excluded_files = ["delete_all.py", "create_all.py"]
+excluded_files = ["main.py", "delete_all.py", "create_all.py", "README.md"]
 excluded_extensions = [".json", ".git", ".gitignore"]
 
 items_to_delete = [item for item in all_dirs if item not in excluded_files and not any(item.endswith(ext) for ext in excluded_extensions)]
