@@ -18,12 +18,10 @@ def create_structure(dic):
             create_structure(dic[key])
             os.chdir("..")
 
-
 def start():
     global src
     if src != None:
         os.mkdir(src)
         os.chdir(src)
-
         create_structure(data)
         os.chdir("..")
