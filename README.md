@@ -4,9 +4,11 @@ Now you dont have this. This automation code creates the MVC file structor for y
 
 Simple Python file to create and also delete a file structor.
 
-> python3 create_all.py
+> python3 main.py
+>
+> then follow the instructions on the terminal choose either 1 or 2, 1 for backend and 2 for frontend
 
-Creates the skeleton files
+Creates the skeleton file structure
 
 > python3 delete_all.py
 

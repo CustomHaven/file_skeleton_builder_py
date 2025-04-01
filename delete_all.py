@@ -5,16 +5,11 @@ def delete_file(root, file):
 
 def delete_directory_and_contents(directory):
     for root, dirs, files in os.walk(directory, topdown=False):  # Walk through directories bottom-up
-
-        # Delete all files first
         for file in files:
-            delete_file(root, file)  # Remove the file
-        # Delete all empty subdirectories
+            delete_file(root, file)
         for dir in dirs:
-            os.rmdir(os.path.join(root, dir))  # Remove empty subdirectories
-    # Now remove the main directory
+            os.rmdir(os.path.join(root, dir))
     os.rmdir(directory)
-
 
 all_dirs = os.listdir(".")
 
