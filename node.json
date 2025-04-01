@@ -1,0 +1,24 @@
+{
+    "__tests__": {
+        "integration": [ "api-user.test.js" ],
+        "unit": {
+            "controllers": [ "user.test.js" ],
+            "models": [ "User.test.js" ]
+        }
+    },
+    "controllers": [ "userController.js" ],
+    "db": [
+        "connect.js",
+        "setup.js"
+    ],
+    "middleware": [
+        "adminAuth.js",
+        "authenticator.js",
+        "logger.js",
+        "swagger.js"
+    ],
+    "models": [ "User.js" ],
+    "routers": [ "userRouter.js" ],
+    "services": [ "index.js" ],
+    "utils": [ "helper.js" ]
+}
