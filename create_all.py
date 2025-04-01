@@ -1,7 +1,7 @@
 import os
 import json
 
-with open("node.json", "r") as f:
+with open("node_mvc.json", "r") as f:
     data = json.load(f)
 
 os.mkdir("backend")
