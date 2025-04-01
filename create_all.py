@@ -4,11 +4,9 @@ import json
 with open("node_mvc.json", "r") as f:
     data = json.load(f)
 
-os.mkdir("backend")
-os.chdir("backend")
+src = None
 
-def create_structor(dic):
-
+def create_structure(dic):
     for key, value in dic.items():
         os.mkdir(key)
         if isinstance(value, list):
@@ -17,8 +15,15 @@ def create_structor(dic):
                     f.write("")
         else:
             os.chdir(key)
-            create_structor(dic[key])
+            create_structure(dic[key])
             os.chdir("..")
 
-create_structor(data)
-os.chdir("..")
+
+def start():
+    global src
+    if src != None:
+        os.mkdir(src)
+        os.chdir(src)
+
+        create_structure(data)
+        os.chdir("..")
